@@ -1,0 +1,96 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    background: linear-gradient(135deg, #41abd1 0%, #9a6db6 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+#login, #player {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+}
+
+#login h2, #player h3, #playlist h3 {
+    margin: 0 0 20px;
+    color: #ffffff;
+}
+
+#login input, #player input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #000000;
+}
+
+#login button, #controls button, .btn-secondary {
+    background: #ab41c3ab;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#login button:hover, #controls button:hover, .btn-secondary:hover {
+    background: #3592cf;
+}
+
+#currentSong {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#cover {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+#songInfo h3, #songInfo p {
+    margin: 5px 0;
+}
+
+#songList, #playlist {
+    text-align: left;
+    margin: 20px 0;
+}
+
+#songList .list-group-item, #playlist .list-group-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#songList .list-group-item:hover, #playlist .list-group-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#controls {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.input-group, .btn-group {
+    width: 100%;
+}

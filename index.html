@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música Local</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/Estilos.css">
+</head>
+<body>
+    <div id="login" class="container text-center mt-5">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="username" class="form-control mb-2" placeholder="Usuario">
+        <input type="email" id="email" class="form-control mb-2" placeholder="Correo">
+        <input type="password" id="password" class="form-control mb-2" placeholder="Contraseña">
+        <button class="btn btn-primary" onclick="login()">Ingresar</button>
+    </div>
+
+    <div id="player" class="container text-center mt-5" style="display: none;">
+        <div id="search" class="input-group mb-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Buscar...">
+            <div class="input-group-append">
+                <button class="btn btn-primary" onclick="searchSongs()">Buscar</button>
+            </div>
+        </div>
+
+        <!-- Botón para mostrar/ocultar listado de canciones -->
+        <button class="btn btn-secondary mb-3" type="button" data-toggle="collapse" data-target="#songList" aria-expanded="false" aria-controls="songList">
+            Mostrar/Ocultar Canciones
+        </button>
+
+        <!-- Listado de canciones colapsable -->
+        <div id="songList" class="collapse list-group">
+            <!-- Lista de canciones -->
+        </div>
+
+        <div id="currentSong" class="d-flex align-items-center mt-3">
+            <img id="cover" src="" alt="Cover" class="img-thumbnail mr-3">
+            <div id="songInfo" class="text-left">
+                <!-- Información de la canción -->
+                <h3 id="songTitle"></h3>
+                <p id="songArtist"></p>
+                <p id="songYear"></p>
+                <p id="songDuration"></p>
+                <p id="songGenre"></p>
+            </div>
+        </div>
+        <div id="controls" class="btn-group mt-3" role="group">
+            <button class="btn btn-primary" onclick="playSong()"><i class="fas fa-play"></i></button>
+            <button class="btn btn-secondary" onclick="pauseSong()"><i class="fas fa-pause"></i></button>
+            <button class="btn btn-info" onclick="nextSong()"><i class="fas fa-forward"></i></button>
+            <button class="btn btn-info" onclick="prevSong()"><i class="fas fa-backward"></i></button>
+            <button class="btn btn-warning" onclick="muteSong()"><i class="fas fa-volume-mute"></i></button>
+        </div>
+        <div id="playlist" class="list-group mt-3">
+            <h3>Playlist</h3>
+            <!-- Lista de reproducción -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="src/app.js"></script>
+</body>
+</html>
+
